@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "assets": {
+    "js": [
+      "public/app/app.js",
+      "public/app/directives/MyDirective.js",
+      "public/app/services/MyService.js",
+      "public/app/filters/MyFilter.js",
+      "public/app/controllers/MyController.js"
+    ],
+    "css": [
+      "public/css/style.css"
+    ]
+  }
+}
