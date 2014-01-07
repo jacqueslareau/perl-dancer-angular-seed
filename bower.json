@@ -1,0 +1,22 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "authors": [
+    "YOUR NAME <youremail@example.com>"
+  ],
+  "directory": "public/bower_components"
+  "description": "MyApp Seed",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "angular": "~1.2.7",
+    "angular-resource": "~1.2.7",
+    "angular-route": "~1.2.7",
+    "bootstrap": "~3.0.3",
+    "font-awesome": "~4.0.3"
+  }
+}
