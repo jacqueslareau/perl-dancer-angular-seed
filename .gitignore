@@ -1,7 +1,8 @@
 logs
-
+node_modules
+public/bower_components
 public/app/build
 public/css/build
-public/bower_components
 
-node_modules
+
+

@@ -1,10 +1,10 @@
 package MyApp;
 use Dancer ':syntax';
 
-our $VERSION = '0.1';
+our $VERSION = '0.0.1';
 
 get '/' => sub {
-    template 'index';
+  return;
 };
 
 true;
