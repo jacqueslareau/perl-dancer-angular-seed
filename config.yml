@@ -5,7 +5,7 @@ version: "0.0.1"
 # we specify a layout even if our layout doesn't contain a content var
 # we are doing single page app, so we only send the layout and angular will take care
 # of changing views
-layout: "main"
+#layout: "main"
 
 # template engine
 # use TT, it's just better

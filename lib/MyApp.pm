@@ -4,7 +4,7 @@ use Dancer ':syntax';
 our $VERSION = '0.0.1';
 
 get '/' => sub {
-  return;
+  template 'layouts/main';
 };
 
 true;

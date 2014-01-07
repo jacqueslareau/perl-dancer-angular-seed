@@ -11,9 +11,9 @@ angular.module('app.myDirective').directive('myUser', function () {
 */
 
   return {
-    restrict: 'AE',
+    restrict: 'E',
     scope: {
-      username: '=username'
+      username: '='
     },
     template: '<p>Welcome, <strong>{{ username }}</strong></p>'
   };

@@ -9,9 +9,7 @@
   other project, you probably should use a different naming pattern like: author.modulename
 */
 
-angular.module('app', [
-  'ngRoute','app.myService','app.myFilter','app.myDirective'
-]);
+angular.module('app', ['ngRoute', 'app.myService', 'app.myFilter', 'app.myDirective']);
 
 /** 
   module config

@@ -1,5 +1,14 @@
-<h2>Main page</h2>
+<div class="page-header">
+  <h2>Main page</h2>
+</div>
 
-<p>Message: {{ message }}</p>
+<p>
+  <button class="btn btn-primary" ng-click="sayHello()">Say hello!</button>
+  <button class="btn" ng-click="message=''">Hide hello!</button>
+</p>
 
-<my-user username="RonBurgundy"></my-user>
+<p>Hello message showing? {{ message | checkmark }}</p>
+
+<div class="alert alert-success" ng-show="message">{{ message }}</div>
+
+<my-user username="'RonBurgundy'"></my-user>
