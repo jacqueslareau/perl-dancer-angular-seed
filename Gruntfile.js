@@ -9,30 +9,32 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   
   var pkg = grunt.file.readJSON('package.json');
+  var js_build_path      = pkg.assets.js.build-folder + '/' + pkg.assets.js.build-file;
+  var js_build_min_path  = pkg.assets.js.build-folder + '/' + pkg.assets.js.build-file-min;
+  var css_build_path     = pkg.assets.css.build-folder + '/' + pkg.assets.css.build-file;
+  var css_build_min_path = pkg.assets.css.build-folder + '/' + pkg.assets.css.build-file-min;
   
   grunt.initConfig({
+  
     pkg: pkg,
+    
     clean: {
-      build: ["build"]
+      build: [pkg.assets.js.build-folder, pkg.assets.css.build-folder],
     },
+    
     concat: {
       js: {
         files: {
-          'build/extranet-core-<%= pkg.version %>.js':  pkg.assets.core_js,
-          'build/extranet-login-<%= pkg.version %>.js': pkg.assets.login_js,
-          'build/extranet-user-<%= pkg.version %>.js':  pkg.assets.user_js,
-          'build/extranet-admin-<%= pkg.version %>.js': pkg.assets.admin_js
+          js_build_path: pkg.assets.js.files
         }
       },
       css: {
         files: {
-          'build/extranet-core-<%= pkg.version %>.css':  pkg.assets.core_css,
-          'build/extranet-login-<%= pkg.version %>.css': pkg.assets.login_css,
-          'build/extranet-user-<%= pkg.version %>.css':  pkg.assets.user_css,
-          'build/extranet-admin-<%= pkg.version %>.css': pkg.assets.admin_css
+          css_build_path: pkg.assets.css.files
         }
       }
     },
+    
     uglify: {
       js: {
         options: {
@@ -40,13 +42,11 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'build/extranet-core-<%= pkg.version %>.min.js':  'build/extranet-core-<%= pkg.version %>.js',
-          'build/extranet-login-<%= pkg.version %>.min.js': 'build/extranet-login-<%= pkg.version %>.js',
-          'build/extranet-user-<%= pkg.version %>.min.js':  'build/extranet-user-<%= pkg.version %>.js',
-          'build/extranet-admin-<%= pkg.version %>.min.js': 'build/extranet-admin-<%= pkg.version %>.js'
+          js_build_min_path: js_build_path
         }
       }
     },
+    
     cssmin: {
       css: {
         options: {
@@ -54,13 +54,11 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'build/extranet-core-<%= pkg.version %>.min.css':  'build/extranet-core-<%= pkg.version %>.css',
-          'build/extranet-login-<%= pkg.version %>.min.css': 'build/extranet-login-<%= pkg.version %>.css',
-          'build/extranet-user-<%= pkg.version %>.min.css':  'build/extranet-user-<%= pkg.version %>.css',
-          'build/extranet-admin-<%= pkg.version %>.min.css': 'build/extranet-admin-<%= pkg.version %>.css'
+          css_build_min_path: css_build_path
         }
       }
     }
+    
   });
 
   grunt.registerTask('default', ['clean','concat','uglify','cssmin']);
