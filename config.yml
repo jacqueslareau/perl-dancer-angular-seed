@@ -1,28 +1,26 @@
-# This is the main configuration file of your Dancer app
-# env-related settings should go to environments/$env.yml
-# all the settings in this file will be loaded at Dancer's startup.
-
-# Your application's name
 appname: "MyApp"
+charset: "UTF-8"
+version: "0.0.1"
 
-# The default layout to use for your application (located in
-# views/layouts/main.tt)
+# we specify a layout even if our layout doesn't contain a content var
+# we are doing single page app, so we only send the layout and angular will take care
+# of changing views
 layout: "main"
 
-# when the charset is set to UTF-8 Dancer will handle for you
-# all the magic of encoding and decoding. You should not care
-# about unicode within your app when this setting is set (recommended).
-charset: "UTF-8"
-
 # template engine
-# simple: default and very basic template engine
-# template_toolkit: TT
+# use TT, it's just better
+template: template_toolkit
+engines:
+  template_toolkit:
+    start_tag: '[%'
+    stop_tag: '%]'
 
-template: "simple"
+serializer: "JSON"
 
-# template: "template_toolkit"
-# engines:
-#   template_toolkit:
-#     start_tag: '[%'
-#     end_tag:   '%]'
+# we run our dancer app using starman. we use a http server as a proxy so we left 
+# this below to use
+
+#plack_middlewares:
+#  -
+#    - ReverseProxy
 
