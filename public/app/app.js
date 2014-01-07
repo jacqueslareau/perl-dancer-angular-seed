@@ -23,7 +23,7 @@ angular.module('app', [
 */
 
 angular.module('app').config(
-['$routeProvider','$locationProvider', function($routeProvider,$locationProvider,) {
+['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
 
   $locationProvider.hashPrefix('!');
   

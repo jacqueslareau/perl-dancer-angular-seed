@@ -29,22 +29,6 @@ auto_reload: 1
 # this setting is used to load assets in the main layout
 dev: 1
 
-assets:
-  head:
-    css:
-      - "app/vendor/font-awesome-4.0.3/css/font-awesome.min.css"
-      - "css/bootstrap-adf.min.css"
-    js:
-      - "app/vendor/jquery-1.10.2/jquery-1.10.2.min.js"
-      - "app/vendor/bootstrap-3.0.3/js/bootstrap.min.js"
-      - "app/vendor/angular-1.2.6/angular.js"
-      - "app/vendor/angular-1.2.6/angular-route.js"
-      - "app/vendor/angular-1.2.6/angular-resource.js"
-  head_ie:
-    js:
-      #- "app/vendor/html5shiv-3.7.0/html5shiv.min.js"
-      #- "app/vendor/respond-1.4.2/respond.min.js"
-
 # although the following section seems the same in each environments, we don't put in into 
 # the main config.yml. this will let us use different databases for each environments
 

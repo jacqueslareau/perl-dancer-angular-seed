@@ -3,3 +3,5 @@ logs
 public/app/build
 public/css/build
 public/bower_components
+
+node_modules

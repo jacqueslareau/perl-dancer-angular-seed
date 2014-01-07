@@ -12,6 +12,8 @@
 		<link rel="shortcut icon" href="/favicon.ico">
 
     <!-- include bower css components here -->
+    <link href="/bower_components/font-awesome/font-awesome.min.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     
     [% IF settings.dev %]
       <link href="/css/styles.css" rel="stylesheet">
@@ -31,16 +33,28 @@
       
     </div>
 
-    <!-- include bower js components here -->
-    
     [% IF settings.dev %]
+    
+      <script src="/bower_components/jquery/jquery.js"></script>
+      <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-route/angular-route.js"></script>
+
       <script src="/app/controllers/MyController.js"></script>
       <script src="/app/directives/MyDirective.js"></script>
       <script src="/app/filters/MyFilter.js"></script>
       <script src="/app/services/MyService.js"></script>
       <script src="/app/app.js"></script>
+      
     [% ELSE %]
+    
+      <script src="/bower_components/jquery/jquery.min.js"></script>
+      <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/bower_components/angular/angular.min.js"></script>
+      <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    
       <script src="/app/build/app.min.js"></script>
+      
     [% END %]
     
 	</body>

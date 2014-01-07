@@ -4,7 +4,7 @@
   "authors": [
     "YOUR NAME <youremail@example.com>"
   ],
-  "directory": "public/bower_components"
+  "directory": "public/bower_components",
   "description": "MyApp Seed",
   "license": "MIT",
   "private": true,
@@ -13,9 +13,8 @@
     "node_modules"
   ],
   "dependencies": {
-    "angular": "~1.2.7",
-    "angular-resource": "~1.2.7",
-    "angular-route": "~1.2.7",
+    "angular": "~1.2.8",
+    "angular-route": "~1.2.8",
     "bootstrap": "~3.0.3",
     "font-awesome": "~4.0.3"
   }

@@ -9,29 +9,27 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   
   var pkg = grunt.file.readJSON('package.json');
-  var js_build_path      = pkg.assets.js.build-folder + '/' + pkg.assets.js.build-file;
-  var js_build_min_path  = pkg.assets.js.build-folder + '/' + pkg.assets.js.build-file-min;
-  var css_build_path     = pkg.assets.css.build-folder + '/' + pkg.assets.css.build-file;
-  var css_build_min_path = pkg.assets.css.build-folder + '/' + pkg.assets.css.build-file-min;
+  var js_build_path      = pkg.assets.js['build-folder'] + '/' + pkg.assets.js['build-file'];
+  var js_build_min_path  = pkg.assets.js['build-folder'] + '/' + pkg.assets.js['build-file-min'];
+  var css_build_path     = pkg.assets.css['build-folder'] + '/' + pkg.assets.css['build-file'];
+  var css_build_min_path = pkg.assets.css['build-folder'] + '/' + pkg.assets.css['build-file-min'];
   
   grunt.initConfig({
   
     pkg: pkg,
     
     clean: {
-      build: [pkg.assets.js.build-folder, pkg.assets.css.build-folder],
+      build: [pkg.assets.js['build-folder'], pkg.assets.css['build-folder']],
     },
     
     concat: {
       js: {
-        files: {
-          js_build_path: pkg.assets.js.files
-        }
+        src: pkg.assets.js.files,
+        dest: js_build_path
       },
       css: {
-        files: {
-          css_build_path: pkg.assets.css.files
-        }
+        src: pkg.assets.css.files,
+        dest: css_build_path
       }
     },
     
@@ -41,9 +39,8 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
           report: 'min'
         },
-        files: {
-          js_build_min_path: js_build_path
-        }
+        src: js_build_path,
+        dest: js_build_min_path
       }
     },
     
@@ -53,9 +50,8 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
           report: 'min'
         },
-        files: {
-          css_build_min_path: css_build_path
-        }
+        src: css_build_path,
+        dest: css_build_min_path
       }
     }
     
