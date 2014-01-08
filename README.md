@@ -24,35 +24,41 @@ It's designed to be used to create a Single Page Application (SPA).
 You can declare your AngularJS source files and css files in the package.json file. 
 
 ```json
-"assets": {
-  "js": {
-    "build-folder": "public/app/build",
-    "build-file": "app.js",
-    "build-file-min": "app.min.js",
-    "files": [
-      "public/app/app.js",
-      "public/app/directives/MyDirective.js",
-      "public/app/services/MyService.js",
-      "public/app/filters/MyFilter.js",
-      "public/app/controllers/MyController.js"
-    ]
-  },
-  "css": {
-    "build-folder": "public/css/build",
-    "build-file": "style.css",
-    "build-file-min": "style.min.css",
-    "files": [
-      "public/css/style.css"
-    ]
+
+...
+  "assets": {
+    "js": {
+      "build-folder": "public/app/build",
+      "build-file": "app.js",
+      "build-file-min": "app.min.js",
+      "files": [
+        "public/app/app.js",
+        "public/app/directives/MyDirective.js",
+        "public/app/services/MyService.js",
+        "public/app/filters/MyFilter.js",
+        "public/app/controllers/MyController.js"
+      ]
+    },
+    "css": {
+      "build-folder": "public/css/build",
+      "build-file": "style.css",
+      "build-file-min": "style.min.css",
+      "files": [
+        "public/css/style.css"
+      ]
+    }
   }
-}
+...
+
 ```
 
-This is used at grunt time to create build files to be used outside of the development environment.
+This is used by grunt to build the files that will be used in production.
 
 At development stage, use the normal html tags to include javascript and css files.
-For this to work, we use template toolkit to select between compiled and normals assets. This also 
-allows to work with our AngularJS apps and not have to grunt after each modifications
+For this to work, we use template toolkit to select between compiled and normals assets.
+You can view how it's done in the views/layouts/main.tt file.
+
+This allows us to develop our AngularJS apps and not have to grunt after each modifications. 
 
 ## Notes
 
@@ -63,24 +69,30 @@ doesn't break your code.
 
 You need the following softwares installed on your system:
 
-- node (0.10.20)
-- npm (1.3.11)
+- node (0.10.20+)
+- npm (1.3.11+)
 - bower (1.2.8+)
-- grunt (0.4.2)
+- grunt (0.4.2+)
 - Perl and Perl Dancer 1
 
 ## Install
 
- git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
- git remote rm destination
- npm install
- bower install
- grunt
- 
+```
+git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
+git remote rm destination
+npm install
+bower install
+grunt
+```
+
 You can run the app in development mode using:
 
- bin/start-dev.pl
+```
+bin/start-dev.pl
+```
 
 And then point your brower to:
 
+```
 http://localhost:5000
+```
