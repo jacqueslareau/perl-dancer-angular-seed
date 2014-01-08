@@ -17,6 +17,28 @@ It's designed to be used to create a Single Page Application (SPA).
  - Perl Dancer config files with ready to use templates to setup popular plugins like: 
    Database, Auth::Extensible and DBIC
  - a layout that includes all assets (compiled in production)
+
+## Install
+
+```
+git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
+git remote rm destination
+npm install
+bower install
+grunt
+```
+
+You can run the app in development mode using:
+
+```
+bin/start-dev.pl
+```
+
+And then point your brower to:
+
+```
+http://localhost:5000
+```
  
 ## Documentation
 
@@ -72,25 +94,3 @@ You need the following softwares installed on your system:
 - bower (1.2.8+)
 - grunt (0.4.2+)
 - Perl and Perl Dancer 1
-
-## Install
-
-```
-git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
-git remote rm destination
-npm install
-bower install
-grunt
-```
-
-You can run the app in development mode using:
-
-```
-bin/start-dev.pl
-```
-
-And then point your brower to:
-
-```
-http://localhost:5000
-```
