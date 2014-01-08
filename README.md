@@ -2,8 +2,6 @@
 
 #### Seed to jumpstart your Perl Dancer/Angular WebApp 
 
-This seed was developped Dancer
-
 ## What it does
 
 A seed that will help jump start a AngularJS app using Perl Dancer as the back end.
