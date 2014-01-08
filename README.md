@@ -16,16 +16,15 @@ It's designed to be used to create a Single Page Application (SPA).
  - a npm package.json file to configure our asset files
  - Perl Dancer config files with ready to use templates to setup popular plugins like: 
    Database, Auth::Extensible and DBIC
-
+ - a layout that includes all assets (compiled in production)
+ 
 ## Documentation
 
-### Configure your assets
+### Configure assets
 
 You can declare your AngularJS source files and css files in the package.json file. 
 
-```json
-
-...
+```
   "assets": {
     "js": {
       "build-folder": "public/app/build",
@@ -48,7 +47,6 @@ You can declare your AngularJS source files and css files in the package.json fi
       ]
     }
   }
-...
 
 ```
 
