@@ -23,6 +23,13 @@ angular.module('app', ['ngRoute', 'app.myService', 'app.myFilter', 'app.myDirect
 angular.module('app').config(
 ['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
 
+  /** 
+    We add the XMLHttpRequest header to all requests. This is to better interact with
+    Perl Dancer ajax keyword. In order to know if a request was a ajax request, Dancer
+    use this header.
+  */
+  $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+
   $locationProvider.hashPrefix('!');
   
   $routeProvider

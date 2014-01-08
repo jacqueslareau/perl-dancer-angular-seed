@@ -13,7 +13,7 @@ It's designed to be used to create a Single Page Application (SPA).
    services, controllers and filters
  - a Bower bower.json file to install AngularJS, Bootstrap, jQuery and Font Awesome
  - a Grunt Gruntfile.js file to compile our AngularJS app for production (concat and uglify)
- - a npm package.json file to configure our asset files
+ - a npm package.json file to install grunt packages and configure our assets
  - Perl Dancer config files with ready to use templates to setup popular plugins like: 
    Database, Auth::Extensible and DBIC
  - a layout that includes all assets (compiled in production)
