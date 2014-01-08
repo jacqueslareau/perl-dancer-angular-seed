@@ -20,18 +20,29 @@ It's designed to be used to create a Single Page Application (SPA).
 
 ## Install
 
+### Dependencies
+
+You need the following softwares installed on your system:
+
+- node.js (0.10.20+) [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+- bower (1.2.8+) [Install](http://bower.io/#installing-bower)
+- grunt (0.4.2+) [Install](http://gruntjs.com/getting-started)
+- Perl and Perl Dancer 1 [Install](http://www.perldancer.org/quickstart)
+
+### Development
+
+Clone the seed project. Remove remote. Use bower to install front end packages.
+
 ```
-git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
-git remote rm destination
-npm install
-bower install
-grunt
+$ git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
+$ git remote rm destination
+$ bower install
 ```
 
 You can run the app in development mode using:
 
 ```
-bin/start-dev.pl
+$ bin/start-dev.pl
 ```
 
 And then point your brower to:
@@ -39,7 +50,18 @@ And then point your brower to:
 ```
 http://localhost:5000
 ```
- 
+
+### Production
+
+After you copied your project sources, you need to install front end packages using bower. Then install node.js packages
+needed for grunt and finally run grunt.
+
+```
+$ bower install
+$ npm install
+$ grunt
+```
+
 ## Documentation
 
 ### Configure assets
@@ -75,22 +97,11 @@ You can declare your AngularJS source files and css files in the package.json fi
 This is used by grunt to build the files that will be used in production.
 
 At development stage, use the normal html tags to include javascript and css files.
+This allows us to develop our AngularJS apps and not have to grunt after each modifications.
 For this to work, we use template toolkit to select between compiled and normals assets.
 You can view how it's done in the views/layouts/main.tt file.
-
-This allows us to develop our AngularJS apps and not have to grunt after each modifications. 
 
 ## Notes
 
 Be sure to use AngularJS array notation to declare functions. It is required to make sure uglify 
 doesn't break your code.
-
-## Dependencies
-
-You need the following softwares installed on your system:
-
-- node (0.10.20+)
-- npm (1.3.11+)
-- bower (1.2.8+)
-- grunt (0.4.2+)
-- Perl and Perl Dancer 1
