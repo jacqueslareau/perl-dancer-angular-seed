@@ -21,7 +21,7 @@ angular.module('app', ['ngRoute', 'app.myService', 'app.myFilter', 'app.myDirect
 */
 
 angular.module('app').config(
-['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+['$routeProvider','$locationProvider','$httpProvider', function($routeProvider,$locationProvider,$httpProvider) {
 
   /** 
     We add the XMLHttpRequest header to all requests. This is to better interact with
