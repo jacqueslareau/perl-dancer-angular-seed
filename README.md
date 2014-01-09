@@ -35,7 +35,8 @@ Clone the seed project. Remove remote. Use bower to install front end packages.
 
 ```
 $ git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
-$ git remote rm destination
+$ cd perl-dancer-angular-seed
+$ git remote rm origin
 $ bower install
 ```
 
