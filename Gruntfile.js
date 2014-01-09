@@ -9,26 +9,28 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   
   var pkg = grunt.file.readJSON('package.json');
-  var js_build_path      = pkg.assets.js['build-folder'] + '/' + pkg.assets.js['build-file'];
-  var js_build_min_path  = pkg.assets.js['build-folder'] + '/' + pkg.assets.js['build-file-min'];
-  var css_build_path     = pkg.assets.css['build-folder'] + '/' + pkg.assets.css['build-file'];
-  var css_build_min_path = pkg.assets.css['build-folder'] + '/' + pkg.assets.css['build-file-min'];
+  var dancer = grunt.file.readYAML('config.yml');
+  
+  var js_build_path      = dancer.assets.js['build-folder'] + '/' + dancer.assets.js['build-file'];
+  var js_build_min_path  = dancer.assets.js['build-folder'] + '/' + dancer.assets.js['build-file-min'];
+  var css_build_path     = dancer.assets.css['build-folder'] + '/' + dancer.assets.css['build-file'];
+  var css_build_min_path = dancer.assets.css['build-folder'] + '/' + dancer.assets.css['build-file-min'];
   
   grunt.initConfig({
   
     pkg: pkg,
     
     clean: {
-      build: [pkg.assets.js['build-folder'], pkg.assets.css['build-folder']],
+      build: [dancer.assets.js['build-folder'], dancer.assets.css['build-folder']],
     },
     
     concat: {
       js: {
-        src: pkg.assets.js.files,
+        src: dancer.assets.js.files,
         dest: js_build_path
       },
       css: {
-        src: pkg.assets.css.files,
+        src: dancer.assets.css.files,
         dest: css_build_path
       }
     },
