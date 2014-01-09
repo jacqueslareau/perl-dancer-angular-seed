@@ -67,32 +67,26 @@ $ grunt
 
 ### Configure assets
 
-You can declare your AngularJS source files and css files in the package.json file. 
+You can declare your AngularJS source files and css files in dancer's config.yml file. 
 
 ```
-  "assets": {
-    "js": {
-      "build-folder": "public/app/build",
-      "build-file": "app.js",
-      "build-file-min": "app.min.js",
-      "files": [
-        "public/app/app.js",
-        "public/app/directives/MyDirective.js",
-        "public/app/services/MyService.js",
-        "public/app/filters/MyFilter.js",
-        "public/app/controllers/MyController.js"
-      ]
-    },
-    "css": {
-      "build-folder": "public/css/build",
-      "build-file": "style.css",
-      "build-file-min": "style.min.css",
-      "files": [
-        "public/css/style.css"
-      ]
-    }
-  }
-
+assets: 
+  js: 
+    build-folder: "public/app/build"
+    build-file: "app.js"
+    build-file-min: "app.min.js"
+    files: 
+      - "public/app/app.js"
+      - "public/app/directives/MyDirective.js"
+      - "public/app/services/MyService.js"
+      - "public/app/filters/MyFilter.js"
+      - "public/app/controllers/MyController.js"
+  css:
+    build-folder: "public/css/build"
+    build-file: "style.css"
+    build-file-min: "style.min.css"
+    files: 
+      - "public/css/style.css"
 ```
 
 This is used by grunt to build the files that will be used in production.
