@@ -4,6 +4,8 @@
 # Starts on port 5555
 
 my @cmd = (
+  "carton",
+  "exec",
 	"plackup",
 	"-s Starman",
 	"-L Shotgun",
