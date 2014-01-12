@@ -22,22 +22,20 @@ It's designed to be used to create an AngularJS Single Page Application (SPA) us
   - task runner ([grunt](http://gruntjs.com/)) to help automate concatenation and minification of 
     web project assets (js/css) for production.
   - node.js package manager (npm) to manage node.js modules.
-  - perl and perl module managers ([plenv](https://github.com/tokuhirom/plenv),[carton](https://metacpan.org/pod/Carton)) 
+  - perl and perl module managers ([plenv](https://github.com/tokuhirom/plenv) and [carton](https://metacpan.org/pod/Carton)) 
     to locally install perl and perl modules.
 
 ### Dependencies
 
 You need the following softwares installed on your system:
 
-- [Perl Dancer 1 or 2](http://www.perldancer.org/), [Install](http://www.perldancer.org/quickstart)
-- [node.js](http://nodejs.org/), [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+- [Perl Dancer 1 or 2](http://www.perldancer.org/): [Install](http://www.perldancer.org/quickstart)
+- [node.js](http://nodejs.org/): [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 - Optional:
- - [plenv](https://github.com/tokuhirom/plenv) and [carton](https://metacpan.org/pod/Carton) plenv and carton 
-   to use local perl and modules instead of those from the system
+ - perl's [plenv](https://github.com/tokuhirom/plenv) and [carton](https://metacpan.org/pod/Carton) 
+   to locally install perl and perl modules.
 
 ## Installation
-
-Clone the seed project. Remove remote. Use bower to install front end packages.
 
 ```
 $ git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git MyApp
@@ -73,7 +71,7 @@ $ git remote rm origin
 ## Production
 
 To deploy for production, create a script that will clone your project in your production folder.
-Your script will have to run the following commands to install needed packages and modules:
+Your script will then have to run the following commands to install needed packages and modules:
 
 ```
 $ npm install
