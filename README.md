@@ -1,46 +1,58 @@
 ﻿# perl-dancer-angular-seed
 
-#### Seed to jumpstart your Perl Dancer/Angular WebApp 
+#### A project template to jumpstart a Perl Dancer/Angular application
 
 ## What it does
 
-A seed that will help jump start a AngularJS app using Perl Dancer as the back end.
-It's designed to be used to create a Single Page Application (SPA).  
+Provides a starting folder to help create a complete web application with 
+[Perl Dancer](http://http://www.perldancer.org) and [AngularJS](http://angularjs.org). 
+
+It's designed to be used to create an AngularJS Single Page Application (SPA) using Perl Dancer as a backend.
 
 ## What's included
 
- - a AngularJS development folder containing a complete working app with examples for directives,
-   services, controllers and filters
- - a Bower bower.json file to install AngularJS, Bootstrap, jQuery and Font Awesome
- - a Grunt Gruntfile.js file to compile our AngularJS app for production (concat and uglify)
- - a npm package.json file to install grunt packages and configure our assets
- - Perl Dancer config files with ready to use templates to setup popular plugins like: 
-   Database, Auth::Extensible and DBIC
- - a layout that includes all assets (compiled in production)
-
-## Install
+ - AngularJS application template with examples for directives, services, controllers and filters.
+ - Perl Dancer (version 1 and 2) application to use as a backend. Also contains templates to configure popular Dancer plugins like: 
+   [Dancer::Plugin::Database](https://metacpan.org/pod/Dancer::Plugin::Database),
+   [Dancer::Plugin::Auth::Extensible](https://metacpan.org/pod/Dancer::Plugin::Auth::Extensible) and 
+   [Dancer::Plugin::DBIC](https://metacpan.org/pod/Dancer::Plugin::DBIC).
+ - Preconfigured: 
+  - web package manager ([bower](http://bower.io/)) to include popular packages like AngularJS, Bootstrap, 
+    jQuery and Font Awesome.
+  - task runner ([grunt](http://gruntjs.com/)) to help automate concatenation and minification of 
+    web project assets (js/css) for production.
+  - node.js package manager (npm) to manage node.js modules.
+  - perl and perl module managers ([plenv](https://github.com/tokuhirom/plenv),[carton](https://metacpan.org/pod/Carton)) 
+    to locally install perl and perl modules.
 
 ### Dependencies
 
 You need the following softwares installed on your system:
 
-- node.js (0.10.20+) [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
-- bower (1.2.8+) [Install](http://bower.io/#installing-bower)
-- grunt (0.4.2+) [Install](http://gruntjs.com/getting-started)
-- Perl and Perl Dancer 1 [Install](http://www.perldancer.org/quickstart)
+- [Perl Dancer 1 or 2](http://www.perldancer.org/), [Install](http://www.perldancer.org/quickstart)
+- [node.js](http://nodejs.org/), [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+- Optional:
+ - [plenv](https://github.com/tokuhirom/plenv) and [carton](https://metacpan.org/pod/Carton) plenv and carton 
+   to use local perl and modules instead of those from the system
 
-### Development
+## Installation
 
 Clone the seed project. Remove remote. Use bower to install front end packages.
 
 ```
-$ git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git
-$ cd perl-dancer-angular-seed
-$ git remote rm origin
+$ git clone git://github.com/jacqueslareau/perl-dancer-angular-seed.git MyApp
+$ cd MyApp
+$ npm install
 $ bower install
 ```
 
-You can run the app in development mode using:
+For a Dancer2 project, use the dancer2 branch. Replace the clone command with this one: 
+
+```
+$ git clone -b dancer2 git://github.com/jacqueslareau/perl-dancer-angular-seed.git MyApp
+```
+
+Start the app in development mode:
 
 ```
 $ bin/start-dev.pl
@@ -52,14 +64,21 @@ And then point your brower to:
 http://localhost:5000
 ```
 
-### Production
-
-After you copied your project sources, you need to install front end packages using bower. Then install node.js packages
-needed for grunt and finally run grunt.
+Go on and remove the origin to fly by yourself:
 
 ```
-$ bower install
+$ git remote rm origin
+```
+
+## Production
+
+To deploy for production, create a script that will clone your project in your production folder.
+Your script will have to run the following commands to install needed packages and modules:
+
+```
 $ npm install
+$ bower install
+$ carton install
 $ grunt
 ```
 
