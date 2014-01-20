@@ -30,8 +30,8 @@ It's designed to be used to create an AngularJS Single Page Application (SPA) us
 You need the following softwares installed on your system:
 
 - [Perl Dancer 1 or 2](http://www.perldancer.org/): [Install](http://www.perldancer.org/quickstart)
-- [node.js](http://nodejs.org/): [Install](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 - Optional:
+ - [node.js](http://nodejs.org/) if you want to use pre-configured grunt and bower.
  - perl's [plenv](https://github.com/tokuhirom/plenv) and [carton](https://metacpan.org/pod/Carton) 
    to locally install perl and perl modules.
 
