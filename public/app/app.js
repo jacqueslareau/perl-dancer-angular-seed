@@ -47,25 +47,37 @@ angular.module('app').config(
 /* angular.module('app').run(['http',function($http){}]); */
 
 /**
-  module bootstrap 
+  load data before app
   
-  We bootstrap the application manually instead of using the ng-app directive.
-  This it so we can load stuff, using jQuery, before starting the angular app.
+  We use this pure angular piece of code to load data before starting our angular application.
+  Useful to load config or app wide constants. You also will be able to use the data fetched here in your .config
+  section of your app.
   
-  Suppose you need a constant that contains configuration variables unique to
-  all users of your app. By fetching it before initiating your app will let you use
-  this data in the config portion of your app.
+  This code also bootstraps your app.
+*/
+/*
+(function() {
+  var initInjector = angular.injector(['ng']);
+  var $http = initInjector.get('$http');
+  $http.get('/config').then(
+    function (response) {
+    
+      angular.module('config', []).constant('Config', response.data);
+
+      angular.element(document).ready(function() {
+        angular.bootstrap(document, ['app']);
+      });
+      
+    }
+  );
+})();
 */
 
+/**
+  application bootstrap 
+  
+  We bootstrap the application manually instead of using the ng-app directive.
+*/
 angular.element(document).ready(function(){
-  
-  /*
-  $.getJSON('/config', function (data) {
-    angular.module('app').constant('Config', data);
-    angular.bootstrap(document, ['app']);
-  });
-  */
-  
   angular.bootstrap(document, ['app']);
-  
 });
