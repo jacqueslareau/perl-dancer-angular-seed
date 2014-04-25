@@ -1,5 +1,7 @@
 requires 'Starman', '0.4008';
 requires 'Dancer', '1.3120';
+requires 'Module::Refresh', '0.17';
+
 #requires 'Dancer::Plugin::Database', '2.09';
 #requires 'Dancer::Plugin::Auth::Extensible', '0.30';
 #requires 'Dancer::Plugin::DBIC', '0.1803';
