@@ -14,7 +14,7 @@
     <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    [% IF settings.dev %]
+    [% IF settings.environment == 'development' %]
       <link href="/css/styles.css" rel="stylesheet">
     [% ELSE %]
       <link href="/css/build/style.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       
     </div>
 
-    [% IF settings.dev %]
+    [% IF settings.environment == 'development' %]
     
       <script src="/bower_components/jquery/jquery.js"></script>
       <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>

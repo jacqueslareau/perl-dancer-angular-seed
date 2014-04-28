@@ -15,9 +15,6 @@ show_errors: 0
 # cache route resolution for maximum performance
 route_cache: 1
 
-# this setting is used to load assets in the main layout
-prod: 1
-
 # although the following section seems the same in each environments, we don't put in into 
 # the main config.yml. this will let us use different databases for each environments
 
