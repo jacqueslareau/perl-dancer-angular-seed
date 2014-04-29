@@ -44,11 +44,7 @@ $ npm install
 $ bower install
 ```
 
-For a Dancer2 project, use the dancer2 branch. Replace the clone command with this one: 
-
-```
-$ git clone -b dancer2 git://github.com/jacqueslareau/perl-dancer-angular-seed.git MyApp
-```
+For a Dancer2 project, check the bin/app.pl file.
 
 Start the app in development mode:
 
@@ -62,7 +58,7 @@ And then point your brower to:
 http://localhost:5000
 ```
 
-Go on and remove the origin to fly by yourself:
+Remove origin with this seed:
 
 ```
 $ git remote rm origin
