@@ -30,10 +30,10 @@ assets:
       - "public/app/controllers/MyController.js"
   css:
     build-folder: "public/css/build"
-    build-file: "style.css"
-    build-file-min: "style.min.css"
+    build-file: "styles.css"
+    build-file-min: "styles.min.css"
     files: 
-      - "public/css/style.css"
+      - "public/css/styles.css"
 
 # we run our dancer app using starman. we use a http server as a proxy so we left 
 # this below to use

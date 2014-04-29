@@ -96,10 +96,10 @@ assets:
       - "public/app/controllers/MyController.js"
   css:
     build-folder: "public/css/build"
-    build-file: "style.css"
-    build-file-min: "style.min.css"
+    build-file: "styles.css"
+    build-file-min: "styles.min.css"
     files: 
-      - "public/css/style.css"
+      - "public/css/styles.css"
 ```
 
 This is used by grunt to build the files that will be used in production.
