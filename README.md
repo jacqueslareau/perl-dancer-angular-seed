@@ -58,7 +58,7 @@ And then point your brower to:
 http://localhost:5000
 ```
 
-Remove origin with this seed:
+Remove git remote:
 
 ```
 $ git remote rm origin
