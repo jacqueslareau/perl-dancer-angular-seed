@@ -55,7 +55,7 @@ $ bin/start-dev.pl
 And then point your brower to:
 
 ```
-http://localhost:5000
+http://localhost:5555
 ```
 
 Remove origin with this seed:
