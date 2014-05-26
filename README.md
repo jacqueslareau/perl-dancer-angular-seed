@@ -52,10 +52,10 @@ Start the app in development mode:
 $ bin/start-dev.pl
 ```
 
-And then point your brower to:
+And then point your browser to:
 
 ```
-http://localhost:5000
+http://localhost:5555
 ```
 
 Remove git remote:
