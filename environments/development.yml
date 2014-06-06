@@ -29,7 +29,7 @@ auto_reload: 1
 # although the following section seems the same in each environments, we don't put in into 
 # the main config.yml. this will let us use different databases for each environments
 
-# session storage using DBI
+# session storage using DBI (compatible with MySQL and SQLite only)
 #session: "DBI"
 #session_options:
 #  dsn:      "DBI:mysql:database=myapp;host=127.0.0.1;port=3306"
